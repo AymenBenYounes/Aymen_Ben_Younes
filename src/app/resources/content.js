@@ -1,5 +1,5 @@
 import { InlineCode } from "@/once-ui/components";
-
+import Link from "next/link";
 const person = {
   firstName: "Aymen",
   lastName: "Ben Younes",
@@ -55,8 +55,17 @@ const home = {
   headline: <>Front End Developer</>,
   subline: (
     <>
-      I'm Aymen, a front end developer , content creator at{" "}
-      <InlineCode>Youtube</InlineCode> and a web dev enthusiast
+      I'm Aymen, a front end developer, content creator at{" "}
+      <InlineCode>
+        <Link
+          href="https://www.youtube.com/@Learn-With-BY"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Youtube
+        </Link>
+      </InlineCode>{" "}
+      and a web dev enthusiast.
     </>
   ),
 };
@@ -132,53 +141,37 @@ const about = {
     skills: [
       {
         title: "Next.js",
-        description: (
-          <>Building next gen apps with Next.js + Shadcn/ui</>
-        ),
+        description: <>Building next gen apps with Next.js + Shadcn/ui</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-        ],
+        images: [],
       },
       {
         title: "Tailwind CSS",
-        description: (
-          <>Styling modern UIs with utility-first CSS</>
-        ),
+        description: <>Styling modern UIs with utility-first CSS</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-        ],
+        images: [],
       },
       {
         title: "TypeScript",
-        description: (
-          <>Writing scalable and type-safe JavaScript</>
-        ),
+        description: <>Writing scalable and type-safe JavaScript</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-        ],
+        images: [],
       },
       {
         title: "SQL",
-        description: (
-          <>Managing relational databases with SQL</>
-        ),
+        description: <>Managing relational databases with SQL</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-        ],
+        images: [],
       },
       {
         title: "Git",
-        description: (
-          <>Version control and collaboration with Git</>
-        ),
+        description: <>Version control and collaboration with Git</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-        ],
-      }
+        images: [],
+      },
     ],
   },
 };
-
 
 const work = {
   label: "Work",
@@ -188,4 +181,4 @@ const work = {
   // All projects will be listed on the /home and /work routes
 };
 
-export { person, social, newsletter, home, about, work};
+export { person, social, newsletter, home, about, work };
